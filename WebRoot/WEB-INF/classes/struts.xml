@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.action.excludePattern" value="/static/.*?" />
+
+    <package name="default" namespace="/" extends="struts-default">
+			
+	    <!-- 定义新的拦截器栈, 配置 prepare 拦截器栈的 alwaysInvokePrepare 参数值为 false 即默认不执行prepare方法-->
+		<interceptors>
+			<interceptor-stack name="sshStack">
+				<interceptor-ref name="paramsPrepareParamsStack">
+					<param name="prepare.alwaysInvokePrepare">false</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 使用新的拦截器栈 -->
+		<default-interceptor-ref name="sshStack"></default-interceptor-ref>
+        <action name="user-*" class="actions.UserAction" method="{1}">      	 
+        	<result type="stream" name="ajax-success">
+		        <param name="contentType">text/html</param>
+		        <param name="inputName">inputStream</param>
+		    </result>			   
+        	<result name="success" type="redirect">/frame/user.jsp</result>
+        	<result name="fail" type="redirect">/public/login.html?status=${status}</result>
+        	<result name="register" type="redirect">/public/register.jsp?status=${status}</result>       	
+        </action>
+        <action name="admin-*" class="actions.AdminAction" method="{1}">      	 
+        	<result type="stream" name="ajax-success">
+		        <param name="contentType">text/html</param>
+		        <param name="inputName">inputStream</param>
+		    </result>			   
+        	<result name="success" type="redirect">/frame/user.jsp</result>
+        	<result name="fail" type="redirect">/public/login.html?status=${status}</result>
+        	<result name="register" type="redirect">/public/register.jsp?status=${status}</result>       	
+        </action>
+        <action name="menu-*" class="actions.MenuAction" method="{1}">
+            <result type="stream" name="ajax-success">
+		        <param name="contentType">text/javascript</param>
+		        <param name="inputName">inputStream</param>
+		    </result>	
+        </action>	
+         <action name="demand-*" class="actions.DemandAction" method="{1}">
+            <result name="save" type="redirect">/user/demand.jsp?sta=${flag}</result>
+            <result name="listAll">/public/browse.jsp</result>
+            <result name="getOne">/user/demand.jsp</result>
+            <result type="stream" name="ajax">
+		        <param name="contentType">text/javascript</param>
+		        <param name="inputName">inputStream</param>
+		    </result>	
+        </action>	       
+    </package>   
+</struts>

@@ -1,0 +1,242 @@
+<html>
+<head>
+<title>登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<style type="text/css">
+        .code
+        {
+            /* background-image:url(code.jpg); */
+            font-family:Arial;
+            font-style:italic;
+            color:Black;
+            border:0;
+            padding:2px 3px;
+            letter-spacing:3px;
+            font-weight:bolder;
+        }
+        .unchanged
+        {
+            border:0;
+        }
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/loginbg.jpg);
+	background-repeat: repeat-x;
+}
+</style>
+<script type="text/javascript">
+		var code ; //在全局 定义验证码
+		function createCode()
+		{
+			  code = "";
+			  var codeLength = 6;//验证码的长度
+			  var checkCode = document.getElementById("checkCode");
+			  var selectChar = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');//所有候选组成验证码的字符，当然也可以用中文的
+			  for(var i=0;i<codeLength;i++)
+			  {
+				    var charIndex = Math.floor(Math.random()*36);
+				    code +=selectChar[charIndex];
+			  }
+			  if(checkCode)
+			  {
+				    checkCode.className="code";
+				    checkCode.value = code;
+			  }
+		}
+
+		function getQueryStr()
+		{
+		    var urlinfo=window.location.href; //获取当前页面的url
+			var len=urlinfo.length;//获取url的长度
+			var offset=urlinfo.indexOf("?");//设置参数字符串开始的位置
+			var newsidinfo=urlinfo.substr(offset,len)//取出参数字符串 这里会获得类似“id=1”这样的字符串
+			//var firstsp = newsidinfo.split("&");
+			newsids=newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割
+			newsid=newsids[1];//得到参数值
+			if(newsid!=null)
+            {
+	             if(newsid==0)
+	             {
+	                alert("用户名不存在")
+	                document.getElementById("username").value="";
+	                document.getElementById("username").focus();
+	             }
+	             if(newsid==1)
+	             {
+	                alert("密码错误");
+	                document.getElementById("password").value="";
+	                document.getElementById("password").focus();
+	             }
+           }
+	     }
+
+		function checkInput()
+		{
+		     var input = document.getElementById("codeCheck");
+		     var checkCode = document.getElementById("checkCode");
+		     /* var username = document.getElementById("username").value;
+	          var password = document.getElementById("password").value;
+	          var form1 = document.createElement("form");
+			  form1.action = username.length>=4?"user-findByNameAndPass":"admin-findByNameAndPass";
+			  form1.method = "POST";
+			  form1.style.display = "none";
+			  document.body.appendChild(form1);					 
+			  var input1 = document.createElement("input");
+			  input1.type = "text";
+			  input1.name = "username";
+			  input1.value = username;
+			  form1.appendChild(input1);
+			  var input2 = document.createElement("input");
+			  input2.type = "text";
+			  input2.name = "password";
+			  input2.value = password;
+			  form1.appendChild(input2);		 				 
+	          form1.submit();
+			  document.body.removeChild(form1); */
+		     if(input.value==checkCode.value)
+		     {
+		          var username = document.getElementById("username").value;
+		          var password = document.getElementById("password").value;
+		          var form1 = document.createElement("form");
+				  form1.action = username.length>=4?"user-findByNameAndPass":"admin-findByNameAndPass";
+				  form1.method = "POST";
+				  form1.style.display = "none";
+				  document.body.appendChild(form1);					 
+				  var input1 = document.createElement("input");
+				  input1.type = "text";
+				  input1.name = "username";
+				  input1.value = username;
+				  form1.appendChild(input1);
+				  var input2 = document.createElement("input");
+				  input2.type = "text";
+				  input2.name = "password";
+				  input2.value = password;
+				  form1.appendChild(input2);		 				 
+		          form1.submit();
+				  document.body.removeChild(form1);
+		     }
+		     else
+		     {
+		         createCode();
+		         input.value = "";
+		         alert("验证码输入错误");
+		         document.body.removeChild(form1);
+		         document.all.codeCheck.focus();
+		     }
+		}
+</script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+    var i,x,a=document.MM_sr;
+    for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++)
+    x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d = document;
+  if(d.images)
+  {
+	    if(!d.MM_p) d.MM_p=new Array();
+	    var i,j=d.MM_p.length,a=MM_preloadImages.arguments;
+	    for(i=0; i<a.length; i++)
+	    if (a[i].indexOf("#")!=0)
+	    {
+	       d.MM_p[j]=new Image;
+	       d.MM_p[j++].src=a[i];
+	    }
+   }
+}
+
+function MM_findObj(n, d) { //v4.01
+      var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+      d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+	  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+	  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+	  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+	  var i,j=0,x,a = MM_swapImage.arguments;
+	  document.MM_sr=new Array;
+	  for(i=0;i<(a.length-2);i+=3)
+	  if ((x=MM_findObj(a[i]))!=null)
+	  {
+	     document.MM_sr[j++]=x;
+	     if(!x.oSrc) x.oSrc=x.src;
+	     x.src=a[i+2];
+	  }
+}
+</script>
+</head>
+<body bgcolor="#FFFFFF" onLoad="MM_preloadImages('http://localhost:8080/Demand/images/login000_06.jpg','http://localhost:8080/Demand/images/loging000_07.jpg');createCode();getQueryStr();">
+<!-- Save for Web Slices (待切.psd) -->
+<table width="795" height="475" border="0" align="center" cellpadding="0" cellspacing="0" id="__01">
+    <tr>
+		    <td colspan="5">
+			<img src="http://localhost:8080/Demand/images/login_01.jpg" width="795" height="159" alt="加载失败">
+			</td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<img src="http://localhost:8080/Demand/images/login_02.jpg" width="269" height="174" alt=""></td>
+		<td bgcolor="#CFE5F2">
+			<img src="http://localhost:8080/Demand/images/login_03.jpg" width="66" height="115" alt=""></td>
+		<td colspan="2" bgcolor="#D0E6F3">
+        <table width="100%" height="116" border="0" cellpadding="0" cellspacing="0">
+	      <tr><!-- 用户名  -->
+	        <td colspan="2" align="left" valign="bottom"><INPUT ID="username" name="username" TYPE="text" CLASS="STYLE1" STYLE="width:180px; height:17px; border:#336699 1px solid" tabindex="1" MAXLENGTH="26" autofocus="autofocus"></td>
+          </tr>
+	      <tr><!-- 密码  -->
+	        <td height="32" colspan="2" align="left" valign="bottom"><INPUT id="password" name="password" TYPE="password" CLASS="STYLE1" STYLE="width:180px; height:17px; border:#336699 1px solid" tabindex="1" MAXLENGTH="26"></td>
+          </tr>
+	      <tr><!-- 验证码 -->
+	        <td width="50%" height="29" align="left" valign="bottom"><INPUT id="codeCheck" NAME="codeCheck" TYPE="text" CLASS="STYLE1" STYLE="width:100px; height:17px; border:#336699 1px solid" tabindex="1" MAXLENGTH="26"></td>
+            <td width="50%" align="left" valign="bottom">
+                <input type="button" onclick="createCode()" readOnly="true" id="checkCode" class="unchanged" style="width: 80px"  />
+            </td>
+          </tr>
+	      <tr>
+	        <td height="30" colspan="1" align="left" valign="bottom">&nbsp;</td>
+	      </tr>
+          </table></td>
+  <td rowspan="2">
+			<img src="http://localhost:8080/Demand/images/login_05.jpg" width="262" height="174" alt=""></td>
+	</tr>
+	<tr>
+	    <!-- 登录 -->
+		<td colspan="2">
+		<a href="javascript:checkInput();" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','http://localhost:8080/Demand/images/loging000_06.jpg',1)">
+		<img src="http://localhost:8080/Demand/images/login_06.jpg" name="Image12" width="135" height="59" border="0">
+		</a>
+		</td>
+		<!-- 注册  -->
+        <td>
+        <a href="http://localhost:8080/Demand/public/register.jsp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','http://localhost:8080/Demand/images/loging000_07.jpg',1)">
+        <img src="http://localhost:8080/Demand/images/login_07.jpg" name="Image13" width="129" height="59" border="0">
+        </a>
+        </td>
+  </tr>
+	<tr>
+		<td colspan="5">
+			<img src="http://localhost:8080/Demand/images/login_08.jpg" width="795" height="141" alt="">
+	    </td>
+	</tr>
+	<tr>
+		<td>
+			<img src="http://localhost:8080/Demand/images/&#x5206;&#x9694;&#x7b26;.gif" width="269" height="1" alt=""></td>
+		<td>
+			<img src="http://localhost:8080/Demand/images/&#x5206;&#x9694;&#x7b26;.gif" width="66" height="1" alt=""></td>
+		<td>
+			<img src="http://localhost:8080/Demand/images/&#x5206;&#x9694;&#x7b26;.gif" width="69" height="1" alt=""></td>
+		<td>
+			<img src="http://localhost:8080/Demand/images/&#x5206;&#x9694;&#x7b26;.gif" width="129" height="1" alt=""></td>
+		<td>
+			<img src="http://localhost:8080/Demand/images/&#x5206;&#x9694;&#x7b26;.gif" width="262" height="1" alt=""></td>
+	</tr>
+
+</table>
+<!-- End Save for Web Slices -->
+</body>
+</html>

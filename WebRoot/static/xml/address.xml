@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<address>  
+   <city name="石家庄市" value="130100">
+			
+   <country name="市辖区" value="130101"/>
+			
+   <country name="长安区" value="130102"/>
+			
+   <country name="桥东区" value="130103"/>
+			
+   <country name="桥西区" value="130104"/>
+			
+   <country name="新华区" value="130105"/>
+			
+   <country name="井陉矿区" value="130107"/>
+			
+   <country name="裕华区" value="130108"/>
+			
+   <country name="井陉县" value="130121"/>
+			
+   <country name="正定县" value="130123"/>
+			
+   <country name="栾城县" value="130124"/>
+			
+   <country name="行唐县" value="130125"/>
+			
+   <country name="灵寿县" value="130126"/>
+			
+   <country name="高邑县" value="130127"/>
+			
+   <country name="深泽县" value="130128"/>
+			
+   <country name="赞皇县" value="130129"/>
+			
+   <country name="无极县" value="130130"/>
+			
+   <country name="平山县" value="130131"/>
+			
+   <country name="元氏县" value="130132"/>
+			
+   <country name="赵县" value="130133"/>
+			
+   <country name="辛集市" value="130181"/>
+			
+   <country name="藁城市" value="130182"/>
+			
+   <country name="晋州市" value="130183"/>
+			
+   <country name="新乐市" value="130184"/>
+			
+   <country name="鹿泉市" value="130185"/>
+		
+  </city>		
+  <city name="唐山市" value="130200">
+			
+   <country name="市辖区" value="130201"/>
+			
+   <country name="路南区" value="130202"/>
+			
+   <country name="路北区" value="130203"/>
+			
+   <country name="古冶区" value="130204"/>
+			
+   <country name="开平区" value="130205"/>
+			
+   <country name="丰南区" value="130207"/>
+			
+   <country name="丰润区" value="130208"/>
+			
+   <country name="滦县" value="130223"/>
+			
+   <country name="滦南县" value="130224"/>
+			
+   <country name="乐亭县" value="130225"/>
+			
+   <country name="迁西县" value="130227"/>
+			
+   <country name="玉田县" value="130229"/>
+			
+   <country name="唐海县" value="130230"/>
+			
+   <country name="遵化市" value="130281"/>
+			
+   <country name="迁安市" value="130283"/>
+		
+  </city>
+		
+  <city name="秦皇岛市" value="130300">
+			
+   <country name="市辖区" value="130301"/>
+			
+   <country name="海港区" value="130302"/>
+			
+   <country name="山海关区" value="130303"/>
+			
+   <country name="北戴河区" value="130304"/>
+			
+   <country name="青龙满族自治县" value="130321"/>
+			
+   <country name="昌黎县" value="130322"/>
+			
+   <country name="抚宁县" value="130323"/>
+			
+   <country name="卢龙县" value="130324"/>
+		
+  </city>
+		
+  <city name="邯郸市" value="130400">
+			
+   <country name="市辖区" value="130401"/>
+			
+   <country name="邯山区" value="130402"/>
+			
+   <country name="丛台区" value="130403"/>
+			
+   <country name="复兴区" value="130404"/>
+			
+   <country name="峰峰矿区" value="130406"/>
+			
+   <country name="邯郸县" value="130421"/>
+			
+   <country name="临漳县" value="130423"/>
+			
+   <country name="成安县" value="130424"/>
+			
+   <country name="大名县" value="130425"/>
+			
+   <country name="涉县" value="130426"/>
+			
+   <country name="磁县" value="130427"/>
+			
+   <country name="肥乡县" value="130428"/>
+			
+   <country name="永年县" value="130429"/>
+			
+   <country name="邱县" value="130430"/>
+			
+   <country name="鸡泽县" value="130431"/>
+			
+   <country name="广平县" value="130432"/>
+			
+   <country name="馆陶县" value="130433"/>
+			
+   <country name="魏县" value="130434"/>
+			
+   <country name="曲周县" value="130435"/>
+			
+   <country name="武安市" value="130481"/>
+		
+  </city>
+		
+  <city name="邢台市" value="130500">
+			
+   <country name="市辖区" value="130501"/>
+			
+   <country name="桥东区" value="130502"/>
+			
+   <country name="桥西区" value="130503"/>
+			
+   <country name="邢台县" value="130521"/>
+			
+   <country name="临城县" value="130522"/>
+			
+   <country name="内丘县" value="130523"/>
+			
+   <country name="柏乡县" value="130524"/>
+			
+   <country name="隆尧县" value="130525"/>
+			
+   <country name="任县" value="130526"/>
+			
+   <country name="南和县" value="130527"/>
+			
+   <country name="宁晋县" value="130528"/>
+			
+   <country name="巨鹿县" value="130529"/>
+			
+   <country name="新河县" value="130530"/>
+			
+   <country name="广宗县" value="130531"/>
+			
+   <country name="平乡县" value="130532"/>
+			
+   <country name="威县" value="130533"/>
+			
+   <country name="清河县" value="130534"/>
+			
+   <country name="临西县" value="130535"/>
+			
+   <country name="南宫市" value="130581"/>
+			
+   <country name="沙河市" value="130582"/>
+		
+  </city>
+		
+  <city name="保定市" value="130600">
+			
+   <country name="市辖区" value="130601"/>
+			
+   <country name="新市区" value="130602"/>
+			
+   <country name="北市区" value="130603"/>
+			
+   <country name="南市区" value="130604"/>
+			
+   <country name="满城县" value="130621"/>
+			
+   <country name="清苑县" value="130622"/>
+			
+   <country name="涞水县" value="130623"/>
+			
+   <country name="阜平县" value="130624"/>
+			
+   <country name="徐水县" value="130625"/>
+			
+   <country name="定兴县" value="130626"/>
+			
+   <country name="唐县" value="130627"/>
+			
+   <country name="高阳县" value="130628"/>
+			
+   <country name="容城县" value="130629"/>
+			
+   <country name="涞源县" value="130630"/>
+			
+   <country name="望都县" value="130631"/>
+			
+   <country name="安新县" value="130632"/>
+			
+   <country name="易县" value="130633"/>
+			
+   <country name="曲阳县" value="130634"/>
+			
+   <country name="蠡县" value="130635"/>
+			
+   <country name="顺平县" value="130636"/>
+			
+   <country name="博野县" value="130637"/>
+			
+   <country name="雄县" value="130638"/>
+			
+   <country name="涿州市" value="130681"/>
+			
+   <country name="定州市" value="130682"/>
+			
+   <country name="安国市" value="130683"/>
+			
+   <country name="高碑店市" value="130684"/>
+		
+  </city>
+		
+  <city name="张家口市" value="130700">
+			
+   <country name="市辖区" value="130701"/>
+			
+   <country name="桥东区" value="130702"/>
+			
+   <country name="桥西区" value="130703"/>
+			
+   <country name="宣化区" value="130705"/>
+			
+   <country name="下花园区" value="130706"/>
+			
+   <country name="宣化县" value="130721"/>
+			
+   <country name="张北县" value="130722"/>
+			
+   <country name="康保县" value="130723"/>
+			
+   <country name="沽源县" value="130724"/>
+			
+   <country name="尚义县" value="130725"/>
+			
+   <country name="蔚县" value="130726"/>
+			
+   <country name="阳原县" value="130727"/>
+			
+   <country name="怀安县" value="130728"/>
+			
+   <country name="万全县" value="130729"/>
+			
+   <country name="怀来县" value="130730"/>
+			
+   <country name="涿鹿县" value="130731"/>
+			
+   <country name="赤城县" value="130732"/>
+			
+   <country name="崇礼县" value="130733"/>
+		
+  </city>
+		
+  <city name="承德市" value="130800">
+			
+   <country name="市辖区" value="130801"/>
+			
+   <country name="双桥区" value="130802"/>
+			
+   <country name="双滦区" value="130803"/>
+			
+   <country name="鹰手营子矿区" value="130804"/>
+			
+   <country name="承德县" value="130821"/>
+			
+   <country name="兴隆县" value="130822"/>
+			
+   <country name="平泉县" value="130823"/>
+			
+   <country name="滦平县" value="130824"/>
+			
+   <country name="隆化县" value="130825"/>
+			
+   <country name="丰宁满族自治县" value="130826"/>
+			
+   <country name="宽城满族自治县" value="130827"/>
+			
+   <country name="围场满族蒙古族自治县" value="130828"/>
+		
+  </city>
+		
+  <city name="沧州市" value="130900">
+			
+   <country name="市辖区" value="130901"/>
+			
+   <country name="新华区" value="130902"/>
+			
+   <country name="运河区" value="130903"/>
+			
+   <country name="沧县" value="130921"/>
+			
+   <country name="青县" value="130922"/>
+			
+   <country name="东光县" value="130923"/>
+			
+   <country name="海兴县" value="130924"/>
+			
+   <country name="盐山县" value="130925"/>
+			
+   <country name="肃宁县" value="130926"/>
+			
+   <country name="南皮县" value="130927"/>
+			
+   <country name="吴桥县" value="130928"/>
+			
+   <country name="献县" value="130929"/>
+			
+   <country name="孟村回族自治县" value="130930"/>
+			
+   <country name="泊头市" value="130981"/>
+			
+   <country name="任丘市" value="130982"/>
+			
+   <country name="黄骅市" value="130983"/>
+			
+   <country name="河间市" value="130984"/>
+		
+  </city>
+		
+  <city name="廊坊市" value="131000">
+			
+   <country name="市辖区" value="131001"/>
+			
+   <country name="安次区" value="131002"/>
+			
+   <country name="广阳区" value="131003"/>
+			
+   <country name="固安县" value="131022"/>
+			
+   <country name="永清县" value="131023"/>
+			
+   <country name="香河县" value="131024"/>
+			
+   <country name="大城县" value="131025"/>
+			
+   <country name="文安县" value="131026"/>
+			
+   <country name="大厂回族自治县" value="131028"/>
+			
+   <country name="霸州市" value="131081"/>
+			
+   <country name="三河市" value="131082"/>
+		
+  </city>
+		
+  <city name="衡水市" value="131100">
+			
+   <country name="市辖区" value="131101"/>
+			
+   <country name="桃城区" value="131102"/>
+			
+   <country name="枣强县" value="131121"/>
+			
+   <country name="武邑县" value="131122"/>
+			
+   <country name="武强县" value="131123"/>
+			
+   <country name="饶阳县" value="131124"/>
+			
+   <country name="安平县" value="131125"/>
+			
+   <country name="故城县" value="131126"/>
+			
+   <country name="景县" value="131127"/>
+			
+   <country name="阜城县" value="131128"/>
+			
+   <country name="冀州市" value="131181"/>
+			
+   <country name="深州市" value="131182"/>
+		
+  </city>
+	     
+</address>	
+  

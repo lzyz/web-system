@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="userDao" class="Dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userServiceImpl" class="services.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<bean id="userAction" class="actions.UserAction" scope="prototype">
+		<property name="userService" ref="userServiceImpl"></property>			
+	</bean>
+	
+	<bean id="menuDao" class="Dao.MenuDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="menuService" class="services.MenuService">
+		<property name="menuDao" ref="menuDao"></property>
+	</bean>
+	
+	<bean id="menuAction" class="actions.MenuAction" scope="prototype">
+		<property name="menuService" ref="menuService"></property>			
+	</bean>	
+	
+	<bean id="demandDao" class="Dao.DemandDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="demandService" class="services.DemandService">
+		<property name="demandDao" ref="demandDao"></property>
+	</bean>
+	
+	<bean id="demandAction" class="actions.DemandAction" scope="prototype">
+		<property name="demandService" ref="demandService"></property>			
+	</bean>	
+	
+	<bean id="adminDao" class="Dao.AdminDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="adminService" class="services.AdminService">
+		<property name="adminDao" ref="adminDao"></property>
+	</bean>
+	
+	<bean id="adminAction" class="actions.AdminAction" scope="prototype">
+		<property name="adminService" ref="adminService"></property>			
+	</bean>	
+</beans>
